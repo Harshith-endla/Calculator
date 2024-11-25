@@ -105,9 +105,6 @@ app.post('/calculator', (req, res) => {
       }
       p {
         font-size: 24px; 
-        font-weight: bold; 
-        text-align: center;
-        margin-top: 20px; 
       }
 
      </style>
