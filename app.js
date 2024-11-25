@@ -63,19 +63,19 @@ app.post('/calculator', (req, res) => {
 
   // Perform the operation based on the user's choice
   switch (operation) {
-    case 'Addition':
+    case 'add':
       result = num1 + num2;
       operationSymbol = '+';
       break;
-    case 'Subtraction':
+    case 'subtract':
       result = num1 - num2;
       operationSymbol = '-';
       break;
-    case 'Multiplication':
+    case 'multiply':
       result = num1 * num2;
       operationSymbol = '*';
       break;
-    case 'Division':
+    case 'divide':
       if (num2 === 0) {
         result = 'Cannot divide by zero';
       } else {
@@ -85,8 +85,8 @@ app.post('/calculator', (req, res) => {
       break;
     default:
       result = 'Invalid operation';
+      operationSymbol = '';
   }
-
 
   res.send(`
     <html>
@@ -104,13 +104,13 @@ app.post('/calculator', (req, res) => {
         margin-top: 50px;
       }
       p {
-        font-size: 24px; 
+      font-size: 20px;
       }
-
      </style>
     </html>
   `);
 });
+
 
 app.listen(port, () => {
   console.log(`Server is running at http://localhost:${port}`);
