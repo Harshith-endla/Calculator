@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 3005;
+const port = 3000;
 
 // Use middleware to parse the request body
 app.use(express.urlencoded({ extended: true }));
